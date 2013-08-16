@@ -70,6 +70,10 @@ var app = {
                 {
                     console.log("Regid " + e.regid);
                     alert('registration id = '+e.regid);
+					$.post(WebServicesUrl + 'Device/', { Type: "Android", Id: e.regid },
+					function (data) {
+						if (data.OK == 1) alert('registered on server');
+					}, 'json');
                 }
             break;
  
