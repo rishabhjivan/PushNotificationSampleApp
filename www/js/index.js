@@ -72,8 +72,10 @@ var app = {
                     alert('registration id = '+e.regid);
 					$.post(WebServicesUrl + 'Device/', { Type: "Android", Id: e.regid },
 					function (data) {
+						alert("server data received");
 						if (data.OK == 1) alert('registered on server');
 					}, 'json');
+					alert("reg done");
                 }
             break;
  
