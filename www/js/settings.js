@@ -1,1 +1,1 @@
-var WebServicesUrl = "http://10.0.0.3/PushSharp/"; //"http://alerts.edlingo.com/";
+var WebServicesUrl = "http://alerts.edlingo.com/"; //"http://10.0.0.3/PushSharp/";

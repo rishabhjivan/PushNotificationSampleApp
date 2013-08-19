@@ -47,11 +47,11 @@ var app = {
         console.log('Received Event: ' + id);
         var pushNotification = window.plugins.pushNotification;
         if (device.platform == 'android' || device.platform == 'Android') {
-            alert("Register called");
+            //alert("Register called");
             pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"480409925201","ecb":"app.onNotificationGCM"});
         }
         else {
-            alert("Register called");
+            //alert("Register called");
             pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
         }
     },
@@ -69,13 +69,11 @@ var app = {
                 if ( e.regid.length > 0 )
                 {
                     console.log("Regid " + e.regid);
-                    alert('registration id = '+e.regid);
+                    //alert('registration id = '+e.regid);
 					$.post(WebServicesUrl + 'Device/', { Type: "Android", Id: e.regid },
 					function (data) {
-						alert("server data received");
-						if (data.OK == 1) alert('registered on server');
+						//if (data.OK == 1) alert('registered on server');
 					}, 'json');
-					alert("reg done");
                 }
             break;
  
